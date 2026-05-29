@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – GIVOGROW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --green: #b8f5a0; --bg: #08080e; --bg2: #10101a; --bg3: #161620; --border: rgba(255,255,255,0.07); --text: #e8e4d9; --muted: #666672; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(184,245,160,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(184,245,160,0.025) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; z-index: 0; }
+    nav { border-bottom: 1px solid var(--border); padding: 20px 28px; position: sticky; top: 0; background: rgba(8,8,14,0.92); backdrop-filter: blur(12px); z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: var(--green); text-decoration: none; text-transform: uppercase; }
+    .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-back:hover { color: var(--text); }
+    .container { max-width: 720px; margin: 0 auto; padding: 64px 28px 80px; position: relative; z-index: 1; }
+    .page-tag { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 16px; display: block; }
+    h1 { font-family: 'Space Mono', monospace; font-size: 32px; font-weight: 700; color: #f0ece0; margin-bottom: 12px; }
+    .subtitle { font-size: 16px; color: var(--muted); font-weight: 300; margin-bottom: 56px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 48px; }
+    .contact-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.2s; }
+    .contact-card:hover { border-color: rgba(184,245,160,0.25); }
+    .contact-card-icon { font-size: 28px; }
+    .contact-card-label { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; }
+    .contact-card-value { font-size: 15px; color: #f0ece0; font-weight: 400; }
+    .contact-card-sub { font-size: 12px; color: var(--muted); font-weight: 300; line-height: 1.5; }
+    .contact-card a { color: var(--green); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card.email-card { grid-column: span 2; flex-direction: row; align-items: center; gap: 24px; background: rgba(184,245,160,0.04); border-color: rgba(184,245,160,0.18); }
+    .email-card-body { flex: 1; }
+    .email-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: #08080e; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 22px; border-radius: 6px; text-decoration: none; white-space: nowrap; transition: opacity 0.2s; flex-shrink: 0; }
+    .email-btn:hover { opacity: 0.85; }
+    h2 { font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; color: var(--green); letter-spacing: 0.08em; text-transform: uppercase; margin: 48px 0 16px; }
+    .app-policy-list { display: flex; flex-direction: column; gap: 10px; }
+    .app-policy-row { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; transition: border-color 0.2s; }
+    .app-policy-row:hover { border-color: rgba(184,245,160,0.25); }
+    .app-policy-left { display: flex; align-items: center; gap: 12px; }
+    .app-policy-icon { font-size: 20px; }
+    .app-policy-name { font-size: 14px; color: #d0ccc0; }
+    .app-policy-link { font-size: 12px; color: var(--green); font-family: 'Space Mono', monospace; }
+    .address-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; margin-top: 16px; }
+    .address-box p { color: #b0aca0; font-size: 14px; font-weight: 300; line-height: 1.9; margin: 0; }
+    @media (max-width: 560px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-card.email-card { grid-column: span 1; flex-direction: column; }
+    }
+    footer { border-top: 1px solid var(--border); padding: 24px 28px; text-align: center; font-size: 12px; color: var(--muted); position: relative; z-index: 1; }
+    footer a { color: var(--green); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="index.html">Givogrow</a>
+    <a class="nav-back" href="index.html">← Home</a>
+  </nav>
+
+  <div class="container">
+    <span class="page-tag">Get in Touch</span>
+    <h1>Contact Us</h1>
+    <p class="subtitle">We'd love to hear from you — support, feedback, or business inquiries.</p>
+
+    <div class="contact-grid">
+      <!-- Main Email -->
+      <div class="contact-card email-card">
+        <div class="contact-card-icon">📧</div>
+        <div class="email-card-body">
+          <div class="contact-card-label">Support & General Enquiries</div>
+          <div class="contact-card-value">game-givogrow@outlook.com</div>
+          <div class="contact-card-sub">We typically respond within 24–48 hours.</div>
+        </div>
+        <a class="email-btn" href="mailto:game-givogrow@outlook.com">Send Email ↗</a>
+      </div>
+
+      <!-- Location -->
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <div class="contact-card-label">Location</div>
+        <div class="contact-card-value">Bhavnagar, Gujarat</div>
+        <div class="contact-card-sub">India 🇮🇳</div>
+      </div>
+
+      <!-- Play Store -->
+      <div class="contact-card">
+        <div class="contact-card-icon">🎮</div>
+        <div class="contact-card-label">Play Store</div>
+        <div class="contact-card-value"><a href="https://play.google.com/store/apps/developer?id=GIVOGROW" target="_blank">GIVOGROW ↗</a></div>
+        <div class="contact-card-sub">All our apps in one place</div>
+      </div>
+    </div>
+
+    <h2>Privacy Policies — Per App</h2>
+    <div class="app-policy-list">
+      <a class="app-policy-row" href="ballsortgo.html">
+        <div class="app-policy-left"><span class="app-policy-icon">🎯</span><span class="app-policy-name">Ball Sort Go</span></div>
+        <span class="app-policy-link">View Policy ↗</span>
+      </a>
+      <a class="app-policy-row" href="colorfruitsort.html">
+        <div class="app-policy-left"><span class="app-policy-icon">🍎</span><span class="app-policy-name">Color Fruit Sort</span></div>
+        <span class="app-policy-link">View Policy ↗</span>
+      </a>
+      <a class="app-policy-row" href="colorpour.html">
+        <div class="app-policy-left"><span class="app-policy-icon">🎨</span><span class="app-policy-name">ColorPour – Sort Puzzle</span></div>
+        <span class="app-policy-link">View Policy ↗</span>
+      </a>
+      <a class="app-policy-row" href="quizok-privacy-policy.html">
+        <div class="app-policy-left"><span class="app-policy-icon">🧠</span><span class="app-policy-name">QuizOK – Daily Quiz</span></div>
+        <span class="app-policy-link">View Policy ↗</span>
+      </a>
+      <a class="app-policy-row" href="quizcab-privacy-policy.html">
+        <div class="app-policy-left"><span class="app-policy-icon">🏆</span><span class="app-policy-name">QuizCab: Fun Quiz & Trivia</span></div>
+        <span class="app-policy-link">View Policy ↗</span>
+      </a>
+    </div>
+
+    <h2>Developer Info</h2>
+    <div class="address-box">
+      <p>
+        ARGENTOBYTE (OPC) PRIVATE LIMITED<br/>
+        Plot No-6/c, Bank Colony, Madhuvan Society,<br/>
+        Bhavnagar Chitra, Bhavnagar,<br/>
+        Gujarat – 364004, India<br/>
+        📞 +91 94095 72648
+      </p>
+    </div>
+  </div>
+
+  <footer>© 2026 GIVOGROW · <a href="index.html">Home</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms</a></footer>
+</body>
+</html>

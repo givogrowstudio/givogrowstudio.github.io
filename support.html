@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support – GIVOGROW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --green: #b8f5a0; --bg: #08080e; --bg2: #10101a; --bg3: #161620; --border: rgba(255,255,255,0.07); --text: #e8e4d9; --muted: #666672; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(184,245,160,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(184,245,160,0.025) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; z-index: 0; }
+    nav { border-bottom: 1px solid var(--border); padding: 20px 28px; position: sticky; top: 0; background: rgba(8,8,14,0.92); backdrop-filter: blur(12px); z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: var(--green); text-decoration: none; text-transform: uppercase; }
+    .nav-back { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-back:hover { color: var(--text); }
+    .container { max-width: 720px; margin: 0 auto; padding: 64px 28px 80px; position: relative; z-index: 1; }
+    .page-tag { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--green); text-transform: uppercase; margin-bottom: 16px; display: block; }
+    h1 { font-family: 'Space Mono', monospace; font-size: 32px; font-weight: 700; color: #f0ece0; margin-bottom: 12px; }
+    .subtitle { font-size: 16px; color: var(--muted); font-weight: 300; margin-bottom: 48px; }
+    .contact-big { background: var(--bg2); border: 1px solid rgba(184,245,160,0.2); border-radius: 14px; padding: 36px; margin-bottom: 40px; text-align: center; }
+    .contact-big .icon { font-size: 40px; margin-bottom: 16px; }
+    .contact-big h2 { font-family: 'Space Mono', monospace; font-size: 18px; color: #f0ece0; margin-bottom: 10px; }
+    .contact-big p { color: var(--muted); font-size: 14px; margin-bottom: 24px; font-weight: 300; }
+    .email-btn { display: inline-block; background: var(--green); color: #08080e; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 13px 28px; border-radius: 6px; text-decoration: none; transition: opacity 0.2s; }
+    .email-btn:hover { opacity: 0.85; }
+    h2.section { font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; color: var(--green); letter-spacing: 0.08em; text-transform: uppercase; margin: 48px 0 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-bottom: 12px; background: var(--bg2); }
+    .faq-q { font-size: 15px; font-weight: 500; color: #f0ece0; margin-bottom: 10px; }
+    .faq-a { font-size: 14px; color: var(--muted); font-weight: 300; line-height: 1.7; }
+    .apps-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+    .app-item { background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; padding: 16px; display: flex; align-items: center; gap: 12px; text-decoration: none; transition: border-color 0.2s; }
+    .app-item:hover { border-color: rgba(184,245,160,0.3); }
+    .app-item-icon { font-size: 24px; }
+    .app-item-name { font-size: 13px; color: #d0ccc0; font-weight: 400; }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--border); padding: 24px 28px; text-align: center; font-size: 12px; color: var(--muted); position: relative; z-index: 1; }
+    footer a { color: var(--green); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="index.html">Givogrow</a>
+    <a class="nav-back" href="index.html">← Home</a>
+  </nav>
+  <div class="container">
+    <span class="page-tag">Help Center</span>
+    <h1>Support</h1>
+    <p class="subtitle">We're here to help. Reach out anytime.</p>
+
+    <div class="contact-big">
+      <div class="icon">📧</div>
+      <h2>Get in Touch</h2>
+      <p>Having a problem with one of our apps? We usually respond within 24–48 hours.</p>
+      <a class="email-btn" href="mailto:game-givogrow@outlook.com">game-givogrow@outlook.com</a>
+    </div>
+
+    <h2 class="section">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">🎮 Why is the app crashing?</div>
+      <div class="faq-a">Try restarting the app or clearing the cache from Settings → Apps → [App Name] → Clear Cache. If the issue persists, email us with your device model and Android version.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">📶 Does the app need internet?</div>
+      <div class="faq-a">Our games can mostly be played offline. However, an internet connection is required to load advertisements and for some features.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">🔒 What data do you collect?</div>
+      <div class="faq-a">We do not collect personal data directly (except QuizOK and QuizCab which may collect a username). Our ad partner Google AdMob may collect non-personal device data. See each app's <a href="index.html#policy">Privacy Policy</a> for details.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">🚫 How do I remove ads?</div>
+      <div class="faq-a">Ads help us keep our apps free. Currently there is no paid option to remove ads. You can opt out of personalized ads from Settings → Google → Ads on your device.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">💾 My progress was lost. What do I do?</div>
+      <div class="faq-a">Game progress is saved locally on your device. Uninstalling the app will delete saved progress. Please contact us and we'll do our best to help.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">🗑️ How do I request data deletion?</div>
+      <div class="faq-a">Email us at <a href="mailto:game-givogrow@outlook.com">game-givogrow@outlook.com</a> with subject "Data Deletion Request – [App Name]". We'll process it within 30 days.</div>
+    </div>
+
+    <h2 class="section">Our Apps</h2>
+    <div class="apps-list">
+      <a class="app-item" href="https://play.google.com/store/apps/details?id=com.ballsortgo.puzzlegame" target="_blank"><span class="app-item-icon">🎯</span><span class="app-item-name">Ball Sort Go</span></a>
+      <a class="app-item" href="https://play.google.com/store/apps/details?id=com.colorfrutesort.puzzle" target="_blank"><span class="app-item-icon">🍎</span><span class="app-item-name">Color Fruit Sort</span></a>
+      <a class="app-item" href="https://play.google.com/store/apps/details?id=com.givogrow.colorpour" target="_blank"><span class="app-item-icon">🎨</span><span class="app-item-name">ColorPour</span></a>
+      <a class="app-item" href="https://play.google.com/store/apps/details?id=com.argentobyte.quizok" target="_blank"><span class="app-item-icon">🧠</span><span class="app-item-name">QuizOK</span></a>
+      <a class="app-item" href="https://play.google.com/store/apps/details?id=com.givogrow.quizmaze" target="_blank"><span class="app-item-icon">🏆</span><span class="app-item-name">QuizCab</span></a>
+    </div>
+  </div>
+  <footer>© 2026 GIVOGROW · <a href="index.html">Home</a> · <a href="contact.html">Contact</a> · <a href="terms.html">Terms</a></footer>
+</body>
+</html>
